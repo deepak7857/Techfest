@@ -1,31 +1,38 @@
 "use client";
 import Eventspage from "../../components/eventspage.jsx";
 import { useEffect, useRef, useState } from "react";
+import {use} from "react";
 export default function Page({ params }) {
+  const unwrappedParams = use(params); 
+  const eventId = unwrappedParams.event;
   let i = useRef();
   const [index, setindex] = useState(0);
   const slug = [
-    "canvas-on-faces",
-    "bgmi-badshah",
-    "digital-india",
-    "engineers-got-talent",
-    "htmlcombat",
-    "pirates",
-    "picasso",
-    "engineerstride",
-    "mr-ms-uu",
-    "head-scratch",
-    "life-of-an-engineer",
-    "innovate-india",
-    "character-clash",
-    "crackncode",
-    "anyday-anime",
-    "cook-without-fire",
+    "codestorm",
+    "vijayghosh",
+    "infographica",
+    "codestorm",
+    "vijayghosh",
+    "nalneel",
+    "prathirupandristikon",
+    "ignitionwar",
+    "vihangam",
+    "vimaanshershtha",
+    "mechwar",
+    "pixelpulse",
+    "Srijansamvaad",
+    "Mechnova",
+    "Yantrasangam",
+    "Kalamanthan",
+    "Cadventure",
+    "Amritdhara",
+    "Recivilize",
+
   ];
   useEffect(() => {
-    for (let index = 0; index < 16; index++) {
+    for (let index = 0; index < 18; index++) {
       const element = slug[index];
-      if (element == params.event) {
+      if (element == eventId) {
         i.current = index;
         break;
       }
@@ -603,22 +610,25 @@ Who will be crowned the ultimate 'Canvas on Face' champion?
     "Ground floor UIT",
   ];
   const title = [
-    ["Face Painting", "Canvas on Faces"],
-    ["E-Sports Event", "BGMI Badshah"],
-    ["Robo Race", "Digital India"],
-    ["Engineer's Got Talent", "Talent Hunt"],
-    ["Website making competition", "HTML Combat"],
-    ["Boat Race", "Pirates"],
-    ["Painting", "UU Picasso"],
-    ["Engineers' Day Fun Run", "Engineers’ Stride"],
-    ["Modelling", "Fashion Show"],
-    ["Technical Quiz Competition", "Head Scratch"],
-    ["Video Creation", "Life of an Engineer"],
-    ["Model Presentation", "Innovate India"],
-    ["Cosplay", "Character Clash"],
-    ["CODING WAR", "Crack N Code"],
-    ["Anime creation", "Anyday Anime"],
-    ["Cook Without Fire", "Cooking Competition"],
+    ["Code Storm", "Hackathon"],
+    ["Vijay Ghosh", "BGMI"],
+    ["Info Graphica", "Data Visualization"],
+    ["Simu Hire",, "Mock Interview"],
+    ["Vidhya Vrith", "Tech Quiz"],
+    ["Nal Neel", "Bridge Design Competition"],
+    ["Prathirupan Dristikon", "Model Presentation"],
+    ["Ignition War", "Rocket Flying"],
+    ["Vihangam", "Drone Flying"],
+    ["Vimaan Shreshta", "RC Plane Flying"],
+    ["Mech War", "E-Robo War"],
+    ["Pixel Pulse", "Technical Poster Making"],
+    ["Srijan Samvaad", "Tech Talk"],
+    ["EngiNova", "Project ShowCase"],
+    ["Yantra Sangam", "Assembly Dissembly"],
+    ["Kala Manthan", "Metal Forging/ Food Design"],
+    ["CADventure", "Computer Aided Design"],
+    ["Amrit Dhara", "Water Treatment Stimulation"],
+    ["Re-Civilized", "Best Out Of Waste"],
   ];
 
   return (

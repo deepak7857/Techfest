@@ -1,3 +1,4 @@
+
 "use client";
 import Image from "next/image";
 import Card from "./components/Card";
@@ -5,90 +6,112 @@ import { useRef } from "react";
 import Faq from "./components/faq";
 import Link from "next/link";
 export default function Home() {
-  const backgroundImageStyle = {
-    backgroundImage: "url(/hero-bg.jpg)",
-    backgroundSize: "cover", // Ensures the image covers the container
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    height: "100vh", // Adjust as needed
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor:"#112"
-  };
-  const backgroundImageStyle2 = {
-    backgroundImage: "url(/bg-cloud.avif)",
-    backgroundSize: "cover", // Ensures the image covers the container
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    opacity: 0.9,
-  };
-  const cardcontent = [
+  const gamingContent=[
+    { title: "Vijay Ghosh", src: "anime.jfif", href: "/event/vijayghosh" },
+  ]
+  //cse
+  const cardcontent1 = [
     {
-      title: "Engineers' Stride",
-      src: "./sprint.jpg",
-      href: "/event/engineerstride",
-    },
-    { title: "UU Picasso", src: "./painting.jpg", href: "/event/picasso" },
+    title: "Code Storm",
+    src: "BGMI-Background-Images.jpg",
+    href: "/event/codestorm",
+  },    
+  { title: "Simu Hire", src: "./painting.jpg", href: "/event/simuhire" },
+    
+  {
+    title: "Pixel Pulse",
+    src: "cooking.jpg",
+    href: "/event/pixelpulse",
+  },
+  {
+    title: "Srijan Samvaad",
+    src: "canvasonfaces.jpg",
+    href: "/event/Srijansamvaad",
+  },
+  {
+    title: "Info Graphica",
+    src: "./sprint.jpg",
+    href: "/event/infographica",
+  },
+  {
+    title: "Vidhya Vrith",
+    src: "./webdesign.jfif",
+    href: "/event/vidhyavrith",
+  },
+  ];
+  //mechanical
+  const cardcontent2 = [
     {
-      title: "Crack N Code",
-      src: "./crackncode.jfif",
-      href: "/event/crackncode",
-    },
-    {
-      title: "HTML Combat",
-      src: "./webdesign.jfif",
-      href: "/event/htmlcombat",
-    },
-    {
-      title: "BGMI Badshah",
-      src: "BGMI-Background-Images.jpg",
-      href: "/event/bgmi-badshah",
-    },
-    { title: "Anyday Anime", src: "anime.jfif", href: "/event/anyday-anime" },
-    { title: "Fashion Show ", src: "fashion-show.jpg", href: "/event/mr-ms-uu" },
-    {
-      title: "Innovate India",
-      src: "innovateindia.jfif",
-      href: "/event/innovate-india",
-    },
-    {
-      title: "Head Scratch",
-      src: "headscratch.jfif",
-      href: "/event/head-scratch",
-    },
-    { title: "Digital India", src: "robo race.jpg", href: "/event/digital-india" },
-    { title: "Pirates", src: "pirates.jfif", href: "/event/pirates" },
-    {
-      title: "Life of an Engineer",
-      src: "engineerlife.jfif",
-      href: "/event/life-of-an-engineer",
-    },
-    {
-      title: "Cook Without Fire",
-      src: "cooking.jpg",
-      href: "/event/cook-without-fire",
-    },
-    {
-      title: "Canvas on Faces",
-      src: "canvasonfaces.jpg",
-      href: "/event/canvas-on-faces",
-    },
-    {
-      title: "Engineers' Got Talent",
+      title: "EngiNova",
       src: "talent.jfif",
-      href: "/event/engineers-got-talent",
+      href: "/event/Mechnova",
     },
     {
-      title: "Character Clash",
+      title: "Yantra Sangam",
       src: "cosplay.jfif",
-      href: "/event/character-clash",
+      href: "/event/Yantrasangam",
+    },
+    {
+      title: "Kala Manthan",
+      src: "cosplay.jfif",
+      href: "/event/Kalamanthan",
+    },
+    {
+      title: "CAD venture",
+      src: "cosplay.jfif",
+      href: "/event/Cadventure",
+    },
+  ];
+  //civil
+  const cardcontent3=[
+    { title: "Nal Neel ", src: "fashion-show.jpg", href: "/event/nalneel" },
+    {
+      title: "Re-Civilize",
+      src: "cosplay.jfif",
+      href: "/event/Recivilize",
+    },
+    {
+      title: "Amrit Dhara",
+      src: "cosplay.jfif",
+      href: "/event/Amritdhara",
+    },
+  ];
+  //Aerospace
+
+  const cardcontent4=[
+    {
+      title: "Vimaan Shershtha",
+      src: "pirates.jfif",
+      href: "/event/vimaanshershtha",
+    },
+    {
+      title: "Ignition War",
+      src: "headscratch.jfif",
+      href: "/event/ignitionwar",
+    },
+    { title: "Vihangam", src: "robo race.jpg", href: "/event/vihangam" },
+  ];
+  //ECE Department
+  const cardcontent5=[
+    {
+      title: "Mech War",
+      src: "engineerlife.jfif",
+      href: "/event/mechwar",
+    },
+  ];
+  //physics
+  const cardcontent6 =[
+    
+    {
+      title: "Prathirupan Dristikon",
+      src: "innovateindia.jfif",
+      href: "/event/prathirupandristikon",
     },
   ];
   const faqcontent = [
     {
-      ques: "What is Engineer's Day?",
-      ans: "A day to celebrate engineering with fun events!",
+      ques: "What is Udgaman?",
+      ans: "Udgaman is our annual Tech Fest at UIT, showcasing innovation and creativity.",
     },
     {
       ques: "How do I register for events?",
@@ -96,7 +119,7 @@ export default function Home() {
     },
     {
       ques: "What events are happening this year?",
-      ans: "Fun run, Code War, Web War, and many more!",
+      ans: "CodeStorm, CadVenture, Vijay Ghosh and many more!",
     },
     // {
     //   ques: "Can I bring my friends?",
@@ -113,44 +136,25 @@ export default function Home() {
   const eventref = useRef();
   return (
     <>
-      <div
-        className="flex flex-col items-center justify-center gap-5 relative h-dvh"
-        style={backgroundImageStyle}
-      >
-        <div className="flex justify-between p-4 w-full">
-          <Image
-            width={190}
-            height={52}
-            src="/UU-New-Logo.png"
-            className="md:w-[15vw] w-[50vw] bg-white p-3 rounded-xl absolute top-5 left-2"
-            alt="logo"
-          />
-
-          <Image
-            width={100}
-            height={60}
-            src="/uit logo.png"
-            className="md:w-[8vw] w-[30vw] bg-white p-3 rounded-xl absolute top-4 right-2"
-            alt="logo"
-          />
-        </div>
-        <div className="font-bold text-white font-sans text-center text-4xl md:text-7xl">
-          Engineers&apos; Day<br/><span className="text-2xl md:text-5xl font-semibold">Mahotsava 2024</span>{" "}
-        </div>
-        <div className=" text-white font-serif md:text-4xl">
-          Unleash Your Inner Genius and Join the Fun!
-        </div>
-        <button
-          className="border-white border-2 font-bold text-xl py-2 px-10 bg-transparent text-white rounded-3xl hover:bg-white hover:text-black"
-          onClick={() => {
-            eventref.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
+      {/* Background Video Section */}
+      <div className="relative w-full h-screen bg-[#112] flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-auto"
+          style={{objectFit:"contain"}}
         >
-          Explore the events
-        </button>
+          <source src="/bgudgaman.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Foreground Content */}
+        
       </div>
+
 
       {/* ----------  DETAILS ------------ */}
 
@@ -177,7 +181,7 @@ export default function Home() {
           ))}
         </div>
         <div className=" mb-5 lg:p-12 flex-1">
-          <img  
+          <img
             className="md:w-[30vw]  mx-auto w-[80%] sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
             src="./deansir.png"
             alt="picture"
@@ -189,7 +193,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-center py-10">
         <div className="font-bold text-center  my-3 text-5xl font-sans">
-          Who We Are
+          About Udgaman
         </div>
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-3">
           {/* <br /> */}
@@ -198,24 +202,14 @@ export default function Home() {
             return <p className="text-lg text-justify lg:px-10 px-5">{item}</p>;
             })} */}
             <p className="text-lg text-justify lg:px-10 px-5">
-              Welcome to <b>ENGINEERS&apos; DAY MAHOTSAVA 2024</b> , the ultimate
-              celebration of engineering brilliance! We are the masterminds
-              behind the most electrifying Engineers&apos; Day event, where
-              creativity meets competition in a whirlwind of excitement.
+            Welcome to Udgaman, the premier Tech Fest of 2025 at Uttaranchal Institute of Technology, where innovation meets elevation. Organized by the esteemed Core Committee UIT, Udgaman is a celebration of technology, creativity, and ingenuity. This dynamic platform bridges the gap between inspiration and action, bringing together bright minds, cutting-edge ideas, and unparalleled opportunities. With a legacy of managing exceptional events, the Core Committee ensures every aspect of Udgaman is crafted to perfection, delivering an unforgettable experience. Embark on this exhilarating journey of technological exploration and elevate your aspirations to new heights.
               <br />
               <br />
-              Our mission? To showcase the incredible talents of engineers while
-              having a blast!
-              <br />
-              <br />
-              Join us as we transform ordinary days into extraordinary
-              experiences. Get ready to laugh, learn, and unleash your inner
-              engineer!
+              Join us in shaping the future!
             </p>
-            
           </div>
           <div className="flex justify-center flex-1">
-            <img src={"/circle.png"} alt="circle.img" />
+            <img src={"groupPhoto.JPG"} alt="groupPhoto.JPG" />
           </div>
         </div>
       </div>
@@ -242,8 +236,32 @@ export default function Home() {
           Epic Events
         </div>
         {/* Events Cards */}
+        <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">Gaming</h1>
         <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
-          {cardcontent.map((item) => {
+          {gamingContent.map((item) => {
+            return (
+              <Link key={item.href} href={item.href} className="px-1 block">
+                <Card title={item.title} key={item.title} src={item.src} />
+              </Link>
+            );
+          })}
+        </div>
+          <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">CSE Department</h1>
+        <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
+          {cardcontent1.map((item) => {
+            return (
+              <Link key={item.href} href={item.href} className="px-1 block">
+                <Card title={item.title} key={item.title} src={item.src} />
+              </Link>
+            );
+          })}
+        </div>
+        <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">Mechanical Department</h1>
+        <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
+          {cardcontent2.map((item) => {
             return (
               <Link key={item.href} href={item.href} className="px-1 block">
                 <Card title={item.title} key={item.title} src={item.src} />
@@ -252,6 +270,52 @@ export default function Home() {
           })}
         </div>
 
+
+        <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">Civil Department</h1>
+        <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
+          {cardcontent3.map((item) => {
+            return (
+              <Link key={item.href} href={item.href} className="px-1 block">
+                <Card title={item.title} key={item.title} src={item.src} />
+              </Link>
+            );
+          })}
+        </div>
+
+        <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">Aerospace Department</h1>
+        <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
+          {cardcontent4.map((item) => {
+            return (
+              <Link key={item.href} href={item.href} className="px-1 block">
+                <Card title={item.title} key={item.title} src={item.src} />
+              </Link>
+            );
+          })}
+        </div>
+        <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">ECE Department</h1>
+        <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
+          {cardcontent5.map((item) => {
+            return (
+              <Link key={item.href} href={item.href} className="px-1 block">
+                <Card title={item.title} key={item.title} src={item.src} />
+              </Link>
+            );
+          })}
+        </div>
+        <hr/>
+        <h1 className="text-white text-center font-bold text-4xl m-5">Physics Department</h1>
+        <div className="flex p-5 lg:p-10 flex-wrap gap-5 justify-center ">
+          {cardcontent6.map((item) => {
+            return (
+              <Link key={item.href} href={item.href} className="px-1 block">
+                <Card title={item.title} key={item.title} src={item.src} />
+              </Link>
+            );
+          })}
+        </div>
         {/* ----- FAQ ----- */}
         <div className="text-center mb-10 font-serif pt-9 font-bold text-5xl text-white">
           FAQS
@@ -294,7 +358,23 @@ export default function Home() {
               Follow Us Online
             </div>
             <div className="font-serif text-xl">
-            Be connected with us on <Link target="_blank" className="font-semibold font-mono text-blue-900 rounded-tr rounded-tl border-b-blue-950 border border-transparent hover:bg-[rgba(255,255,255,0.6)] transition-all " href={'https://www.instagram.com/engineersdaymahotsava2024'}>Instagram</Link> for updates.
+              Be connected with us on{" "}
+              <Link
+                target="_blank"
+                className="font-semibold font-mono text-blue-900 rounded-tr rounded-tl border-b-blue-950 border border-transparent hover:bg-[rgba(255,255,255,0.6)] transition-all "
+                href={"https://www.instagram.com/core.committee_uit?igsh=MW52NDRma3VuYTI5cw=="}
+              >
+                Instagram
+              </Link>{" "}
+              and {" "}
+              <Link
+                target="_blank"
+                className="font-semibold font-mono text-blue-900 rounded-tr rounded-tl border-b-blue-950 border border-transparent hover:bg-[rgba(255,255,255,0.6)] transition-all "
+                href={"https://www.linkedin.com/in/core-committee-uit-202522352"}
+              >
+                LinkedIn
+              </Link>{" "}
+              for updates.
             </div>
           </div>
           <div>
@@ -310,4 +390,3 @@ export default function Home() {
     </>
   );
 }
-
