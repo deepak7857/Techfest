@@ -7,35 +7,37 @@ import Faq from "./components/faq";
 import Link from "next/link";
 export default function Home() {
   const gamingContent=[
-    { title: "Vijay Ghosh", src: "anime.jfif", href: "/event/vijayghosh" },
+    { title: "Vijay Ghosh", src: "BGMI.png", href: "/event/vijayghosh" },
   ]
   //cse
   const cardcontent1 = [
     {
     title: "Code Storm",
-    src: "BGMI-Background-Images.jpg",
+    src: "hackathon.png",
     href: "/event/codestorm",
   },    
-  { title: "Simu Hire", src: "./painting.jpg", href: "/event/simuhire" },
+  { title: "Simu Hire", 
+    src: "./Mock interview.png",
+     href: "/event/simuhire" },
     
   {
     title: "Pixel Pulse",
-    src: "cooking.jpg",
+    src: "tech poster.png",
     href: "/event/pixelpulse",
   },
   {
     title: "Srijan Samvaad",
-    src: "canvasonfaces.jpg",
+    src: "talk.png",
     href: "/event/Srijansamvaad",
   },
   {
     title: "Info Graphica",
-    src: "./sprint.jpg",
+    src: "./Visualization.png",
     href: "/event/infographica",
   },
   {
     title: "Vidhya Vrith",
-    src: "./webdesign.jfif",
+    src: "./Tech quiz.png",
     href: "/event/vidhyavrith",
   },
   ];
@@ -43,36 +45,38 @@ export default function Home() {
   const cardcontent2 = [
     {
       title: "EngiNova",
-      src: "talent.jfif",
-      href: "/event/Mechnova",
+      src: "Model Showcase.png",
+      href: "/event/enginova",
     },
     {
       title: "Yantra Sangam",
-      src: "cosplay.jfif",
+      src: "Assembling Deassembling.png",
       href: "/event/Yantrasangam",
     },
     {
       title: "Kala Manthan",
-      src: "cosplay.jfif",
+      src: "Iron forging design.png",
       href: "/event/Kalamanthan",
     },
     {
       title: "CAD venture",
-      src: "cosplay.jfif",
+      src: "Cadventure.png",
       href: "/event/Cadventure",
     },
   ];
   //civil
   const cardcontent3=[
-    { title: "Nal Neel ", src: "fashion-show.jpg", href: "/event/nalneel" },
+    { title: "Nal Neel ", 
+      src: "Bridge Design.png",
+       href: "/event/nalneel" },
     {
       title: "Re-Civilize",
-      src: "cosplay.jfif",
+      src: "Best out of waste.png",
       href: "/event/Recivilize",
     },
     {
       title: "Amrit Dhara",
-      src: "cosplay.jfif",
+      src: "Water Treatment.png",
       href: "/event/Amritdhara",
     },
   ];
@@ -81,21 +85,21 @@ export default function Home() {
   const cardcontent4=[
     {
       title: "Vimaan Shershtha",
-      src: "pirates.jfif",
+      src: "Fixed wing Rc plane.png",
       href: "/event/vimaanshershtha",
     },
     {
       title: "Ignition War",
-      src: "headscratch.jfif",
+      src: "Rocket Flying.png",
       href: "/event/ignitionwar",
     },
-    { title: "Vihangam", src: "robo race.jpg", href: "/event/vihangam" },
+    { title: "Vihangam", src: "Drone flying.png", href: "/event/vihangam" },
   ];
   //ECE Department
   const cardcontent5=[
     {
       title: "Mech War",
-      src: "engineerlife.jfif",
+      src: "Robo race.png",
       href: "/event/mechwar",
     },
   ];
@@ -104,7 +108,7 @@ export default function Home() {
     
     {
       title: "Prathirupan Dristikon",
-      src: "innovateindia.jfif",
+      src: "Model Presentation.png",
       href: "/event/prathirupandristikon",
     },
   ];
@@ -182,8 +186,8 @@ export default function Home() {
         </div>
         <div className=" mb-5 lg:p-12 flex-1">
           <img
-            className="md:w-[30vw]  mx-auto w-[80%] sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
-            src="./deansir.png"
+            className="md:w-[30vw] h-[70vh]  mx-auto w-[80%] sm:w-[80vw] border-[#eee] shadow-xl border-2 rounded-3xl bg-blue-200"
+            src="./deansir.jpg"
             alt="picture"
           />
         </div>
@@ -380,9 +384,9 @@ export default function Home() {
           <div>
             {/* {" "} */}
             <img
-              src="followus.jfif"
+              src="followus.png"
               alt="Image"
-              className="w-[100%] rounded-xl"
+              className="w-[100%] h-[60vh] rounded-xl"
             />
           </div>
         </div>

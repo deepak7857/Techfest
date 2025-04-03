@@ -26,7 +26,7 @@ const footer = () => {
           <div className="text-[#888]">(B.TECH CSE 3rd year)</div>
         </div>
         <div className="text-white text-center mt-8 text-sm pb-2">
-          &copy; 2024 Engineers Day. All rights reserved.
+          &copy; 2024 Tech fest. All rights reserved.
         </div>
 
         <div className="md:text-md mt-3 pb-2 text-white text-center font-light font-md  ">
